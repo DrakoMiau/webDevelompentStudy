@@ -1,0 +1,126 @@
+:root {
+  --main-bg-color: #151515;
+}
+
+* {
+  color: #e1e1e1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-bg-color);
+  font-family: "Merryweather";
+}
+
+a {
+  text-decoration: none;
+}
+
+header .titulo {
+  font-family: "Bebas Neue";
+  font-size: 120px;
+  color: #8a2e2e;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+nav ul.navegacion {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background: #373737;
+}
+
+nav ul.navegacion li {
+  margin: 0 15px;
+}
+
+nav ul.navegacion li:hover {
+  background-color: black;
+}
+
+nav ul.navegacion li a.clickeable {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+nav ul.categorias {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 200px 20px;
+}
+
+nav ul.categorias li {
+  margin: 0 10px;
+}
+
+.contenedor-imagen {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+nav ul li img.formato {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+nav ul li .texto-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+main section.products-grid {
+  display: flex;
+}
+
+main section article.producto {
+  position: relative;
+  width: 300px;
+  height: 500px;
+}
+
+main section article img.size {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenedor-imagen:hover img.formato {
+  transform: scale(1.2);
+}
+
+.contenedor-imagen:hover .texto-img {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.center-text {
+  text-align: center;
+}
+
+/*
+#000
+#880707
+#5B010E
+#373737
+#909090
+ */
