@@ -1,0 +1,24 @@
+/* 1. Primero el reset o normalizacion*/
+
+/* 2. luego variables y custom properties*/
+
+/* 3. Estilos globales */
+
+/* 4. Estilos de Layout*/
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  background-color: lightgreen;
+  padding: 20px;
+  border: 1px;
+}
+ 
+.item-type {
+  float: left;
+  margin: 10px;
+}
+
+/* 5. Componentes */
