@@ -21,4 +21,9 @@
   margin: 10px;
 }
 
+header .menu{
+  display: flex;
+  float: left;
+}
+
 /* 5. Componentes */
