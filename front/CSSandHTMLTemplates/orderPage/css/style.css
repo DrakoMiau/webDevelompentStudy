@@ -23,6 +23,12 @@ footer {
   border: 1px;
 }
 
+.wrapper-productos {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+}
+
 .item-type {
   float: left;
   margin: 10px;
@@ -36,6 +42,12 @@ header .menu {
 
 header .menu li a {
   text-decoration: none;
+}
+
+.menu-productos {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 .flex-container {
