@@ -18,15 +18,19 @@ footer {
   justify-content: center;
   width: 80%;
   margin: 0 auto;
-  background-color: lightgreen;
-  padding: 20px;
+  padding: 30px;
   border: 1px;
+  background-color: #e5e7eb;
 }
 
 .wrapper-productos {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   justify-content: center;
+}
+
+.wrapper div a{
+  text-decoration: none;
 }
 
 .item-type {
