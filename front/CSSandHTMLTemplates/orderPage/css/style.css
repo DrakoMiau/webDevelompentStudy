@@ -1,21 +1,34 @@
 /* 1. Primero el reset o normalizacion*/
 
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+}
+
 /* 2. luego variables y custom properties*/
 
 /* 3. Estilos globales */
 
 footer {
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 400px;
   background-color: rgb(249 249 249);
+  margin: 0px;
 }
 
-header{
+header {
+  top: 0;
   position: sticky;
+  background-color: rgb(249 249 249);
+  margin: 0px;
+  box-shadow: 1px 1px 1px 1px rgba(32, 32, 32, 0.3);
 }
+
 /* 4. Estilos de Layout*/
 
 .wrapper {
@@ -25,16 +38,14 @@ header{
   max-width: auto;
   margin: 0 auto;
   padding: 30px;
-  border: 1px;
-  padding-bottom: 1000px;
+  margin-bottom: 200px;
 }
 
 .wrapper div a img {
   width: 100px;
 }
 
-.wrapper>div {
-  float: left;
+.wrapper > div {
   margin: 20px;
   margin-left: 120px;
   text-align: center;
@@ -54,6 +65,11 @@ header{
   transform: scale(1.1);
 }
 
+.position-menu{
+  position: fixed;
+  height: 100%;
+}
+
 .wrapper-productos {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto-fit;
@@ -66,8 +82,12 @@ header .menu {
   list-style-type: none;
 }
 
-header .menu li a {
-  text-decoration: none;
+.menu a {
+  margin-left: 20px;
+}
+
+.border-bottom {
+  border-bottom: #ffbc0d solid;
 }
 
 .menu-productos {
@@ -76,14 +96,44 @@ header .menu li a {
   list-style-type: none;
 }
 
+.hover-menu{
+  border: solid 1px;
+  height: 100%;
+}
+
+.hover-menu img{
+  width: 30px;
+}
+
+.hover-menu:hover{
+  
+}
+
+.desplegable {
+ list-style-type: none;
+  width: 0px;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
 }
 
-.boton-entrar {
+.ajustar-izquierda {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.boton-entrar {
+  background-color: #ffbc0d;
+  border: solid 1px;
+  border-radius: 3px;
+  padding: 5px 40px;
+  height: 30px;
+}
+
+.boton-entrar:hover {
+  background-color: yellow;
 }
 
 /* 5. Componentes */
