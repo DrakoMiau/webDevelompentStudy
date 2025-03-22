@@ -65,11 +65,6 @@ header {
   transform: scale(1.1);
 }
 
-.position-menu{
-  position: fixed;
-  height: 100%;
-}
-
 .wrapper-productos {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto-fit;
@@ -96,22 +91,47 @@ header .menu {
   list-style-type: none;
 }
 
-.hover-menu{
-  border: solid 1px;
+/* menu desplegable */
+
+.position-menu {
+  position: fixed;
   height: 100%;
 }
 
-.hover-menu img{
+.menu-logo {
+  width:60px;
+  position: relative;
+  left: 0;
+  border: solid 1px;
+  transition: left 0.2s;
+}
+
+.logo{
+  position: relative;
+  left: 0px;
+  width: 30px;
+  border: 1px solid red;
+  transition: left 0.2s;
+}
+
+.menu-logo img{
   width: 30px;
 }
 
-.hover-menu:hover{
-  
+.menu-logo:hover ~ .logo {
+  left: -30px;
+}
+.hover-menu {
+  transition: background-color 2s;
+  height: 100%;
+}
+
+.menu-logo:hover ~ .hover-menu {
+  background-color: green;
 }
 
 .desplegable {
- list-style-type: none;
-  width: 0px;
+  list-style-type: none;
 }
 
 .flex-container {
