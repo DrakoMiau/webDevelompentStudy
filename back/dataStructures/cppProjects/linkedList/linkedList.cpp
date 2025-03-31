@@ -12,11 +12,6 @@ private:
 public:
   // Constructores
 
-  Node() {
-    this->next = nullptr;
-    this->data = 0;
-  }
-
   Node(int data) {
     this->next = nullptr;
     this->data = data;
@@ -80,6 +75,7 @@ public:
       this->head = newNode;
     }
   }
+
   Node *popFront() {
     if (this->head == nullptr) {
       std::cout << "La lista esta vacia" << std::endl;
@@ -89,6 +85,7 @@ public:
       return head;
     }
   }
+
   Node *popBack() {
     Node *ptr = this->head;
     Node *prev = ptr;
@@ -104,12 +101,14 @@ public:
       return ptr;
     }
   }
+
   Node *topFront() {
     if (this->head == nullptr) {
       std::cout << "La lista esta vacia" << std::endl;
     }
     return head;
   }
+
   Node *topBack() {
     Node *ptr;
     if (this->head == nullptr) {
@@ -122,6 +121,7 @@ public:
       return ptr;
     }
   }
+
   bool Find(int key) {
     Node *ptr = this->head;
     bool isIn = false;
@@ -133,6 +133,7 @@ public:
     }
     return isIn;
   }
+
   bool isEmpty() {
     if (this->head != nullptr) {
       return true;
@@ -142,12 +143,21 @@ public:
   }
 
   // Los siguientes metodos son para el primer dato que coincida
-
-  void addBefore(Node, int key) {
-
+/*
+  void addBefore(int value, int key) {
+    Node *ptr;
+    Node *prev = ptr;
+    Node *newNode = new Node(key);
+    while (ptr->getData() != value || ptr != nullptr) { // busco el dato
+      prev = ptr;
+      ptr = ptr->getNext();
+    }
+    if (ptr == nullptr) {
+      
+    }
   }
   void addAfter(int key) {}
-  void erase(int key) {}
+  void erase(int key) {}*/
 };
 
 int main() {
