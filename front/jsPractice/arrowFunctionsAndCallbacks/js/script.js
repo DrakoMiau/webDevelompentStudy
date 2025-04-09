@@ -41,3 +41,23 @@ console.log(returnObjectFunction());
 let sum = (a, b) => console.log(`${a} + ${b} = ${a + b}`);
 
 sum(10, 20);
+
+// funciones callBack, reescribimos sum
+
+sum = (a, b) => a + b;
+
+let imprimir = () => console.log(sum(10, 40));
+
+imprimir();
+
+// callbacks asincronas con setTimeout
+
+let print = () => console.log("Hola mundo")
+let print2 = () => console.log("Hola a todos")
+
+function esperar (callback1, callback2) {
+  setTimeout(callback1, 2000);
+  setTimeout(callback2, 1000);
+}
+
+esperar(print, print2); // se ejecuta primero print 2 y luego print, lo que prueba que fue asincrono
