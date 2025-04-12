@@ -1,4 +1,6 @@
+#include <algorithm>
 #include <cstdio>
+#include <functional>
 #include <iostream>
 #include <ostream>
 
@@ -160,8 +162,33 @@ public:
   void erase(int key) {}*/
 };
 
+
+void cambiarValor(int* x){
+  *x = 10;
+}
+
+void cambiarArreglo(int *myArr){
+  myArr[1] = 300;
+}
+
+void saludar(){
+  std::cout<<"Hola mundo"<<std::endl;
+}
+
+void reciboFuncion(std::function<void()>callback){
+  callback();
+}
+
 int main() {
-  LinkedList myList;
+  int arr[10] = {10,20,30,40,50,60,70,80,90,100};
+  cambiarArreglo(arr);
+  std::cout<<arr[1]<<std::endl; 
+  //std::cout<<sizeof(arr)/sizeof(arr[0])<<std::endl; //cada elemento mide 4 bytes
+  int x = 20;
+  cambiarValor(&x);
+  std::cout<<x<<std::endl;
+  reciboFuncion(saludar); //callback
+  /*LinkedList myList;
   std::cout << myList.isEmpty() << std::endl;
   int n;
   std::cout << "Ingrese un numero entero: ";
@@ -180,6 +207,7 @@ int main() {
   myList.popBack();
   myList.printList();
   std::cout << "Veamos si la lista esta vacia: " << myList.isEmpty()
-            << std::endl;
+            << std::endl;*/
+
   return 0;
 }

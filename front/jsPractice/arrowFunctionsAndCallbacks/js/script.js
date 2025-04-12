@@ -2,6 +2,8 @@
 
 // La forma mas basica de definir una funcion es:
 
+miFuncionNormal();
+
 function miFuncionNormal() {
   console.log("Funcion Normal");
 }
@@ -15,6 +17,12 @@ miFuncionNormal();
 let miFuncionLet = function () {
   console.log("Funcion Normal");
 };
+
+miFuncionLet = function () {
+  console.log("Modificado");
+};
+
+miFuncionLet();
 
 // funcion flecha
 
@@ -52,10 +60,10 @@ imprimir();
 
 // callbacks asincronas con setTimeout
 
-let print = () => console.log("Hola mundo")
-let print2 = () => console.log("Hola a todos")
+let print = () => console.log("Hola mundo");
+let print2 = () => console.log("Hola a todos");
 
-function esperar (callback1, callback2) {
+function esperar(callback1, callback2) {
   setTimeout(callback1, 2000);
   setTimeout(callback2, 1000);
 }
